@@ -35,7 +35,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Deploy to Heroku (optionnel)
-      uses: akhileshns/heroku-deploy@v3.12.14
+      uses: akhileshns/heroku-deploy@v3.14.15
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "projet-tutorel-pharma"
