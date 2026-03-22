@@ -1,28 +1,18 @@
-# TODO - Projet Pharmacies Tutorel
-Status: En cours - Phase 1 Backend Setup
+# TODO: Fix Maven POM Error (COMPLETED)
 
-## Phase 1: Backend Base (Auth, DB MySQL XAMPP)
-✅ 0. Création TODO.md
+## Steps:
+- [x] Review project structure and identify issue (POM.xml missing version for security-test dep)
+- [x] Analyze POM and tests - confirm unused dependency
+- [x] Get user approval on plan (remove unused dep)
+- [x] Edit pom.xml to remove spring-boot-starter-security-test
+- [x] Test with `mvn clean compile` (successful via .mvnw.cmd)
+- [x] Run tests `mvn test` (successful via .mvnw.cmd)
+- [ ] Start app with `./mvnw.cmd spring-boot:run`
+- [ ] Verify GitHub Actions CI passes on push (push changes to trigger)
 
-## Tasks Phase 1 ✅ Backend Auth/DB
-✅ 1.1-1.7: pom, configs, entities, DTOs, repos, services, controllers, security JWT/RBAC. Compile OK.
-
-## Phase 2: CRUD Pharmacies/Produits/Ventes
-- [ ] Repos/Entities extended
-- [ ] Controllers (PHARMACIEN limited)
-- [ ] Seed 4 pharmacies
-
-## Phase 2: CRUD Users/Stock
-- [ ] ...
-
-## Phase 3: Prévisions IA (Python Prophet subprocess)
-- [ ] Calcul dynamique pics/creux, suggestions
-
-## Phase 4: Frontend Vite+React+TS
-
-**Notes:**
-- DB: MySQL XAMPP localhost:3306/projet_tutorel (créer DB/user si besoin).
-- Prophet: Python subprocess (installer fbprophet localement).
-- RBAC: Strict pharmacie_id check.
-
-**Commande test après Phase 1:** `./mvnw spring-boot:run`
+## Notes
+- Project is Spring Boot 3.3.4 with JWT security, pharmacies/ventes/forecast.
+- No security-specific tests yet.
+- Frontend in separate dir.
+- VSCode Maven may show cached errors - reload/reimport project or ignore.
+- Use `./mvnw.cmd` (Windows) instead of `mvn`.
