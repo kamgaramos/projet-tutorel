@@ -1,2 +1,11 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+# Normalize line endings for cross-platform compatibility
+* text=auto
+
+# Force LF for Java files
+*.java text eol=lf
+
+# Other
+*.yml text eol=lf
+*.yaml text eol=lf
+*.properties text eol=lf
+pom.xml text eol=lf
